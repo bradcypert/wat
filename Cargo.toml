@@ -2,6 +2,12 @@
 name = "wat"
 version = "0.1.0"
 authors = ["Brad Cypert <Brad.Cypert@gmail.com>"]
+description = "git commits in the current directory, pulling a commit message from whatthecommit.com"
+documentation = "http://www.github.com/bradcypert/wat"
+repository = "http://www.github.com/bradcypert/wat"
+readme = "README.md"
+keywords = ["git", "commit", "whatthecommit", "silly"]
+license-file = "license.md"
 
 [dependencies]
 hyper = { version="0.9.10", default-features=false }
