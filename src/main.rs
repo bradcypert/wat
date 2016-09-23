@@ -5,17 +5,17 @@ use std::io::Read;
 use std::process::Command;
 
 fn main() {
-		let client = Client::new();
+	let client = Client::new();
 
-		let mut res = client.get("http://whatthecommit.com/index.txt").send().unwrap();
-		match res.status {
-			hyper::Ok => {
-				let mut message = String::new();
-				res.read_to_string(&mut message).unwrap();
-				commit(&message);
-			}
-			_ => error()
+	let mut res = client.get("http://whatthecommit.com/index.txt").send().unwrap();
+	match res.status {
+		hyper::Ok => {
+			let mut message = String::new();
+			res.read_to_string(&mut message).unwrap();
+			commit(&message);
 		}
+		_ => error()
+	}
 }
 
 fn commit(message: &str) {
